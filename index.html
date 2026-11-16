@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9YZ1BSCE1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-K9YZ1BSCE1');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spreadsheet Academy · Learn Excel by doing it</title>
 <meta name="description" content="A hands-on Excel course for Windows: formulas, data, charts and PivotTables, practised in a real spreadsheet. 49 lessons, 311 checked exercises, works offline.">
@@ -82,6 +90,8 @@ var PFN = 'HerenLabs.SpreadsheetAcademyLearnXLSXSkills_4rr9weehh6kfm';
 /* The 12-character Store ID of the app (for example 9NABCDEF1234) is only needed for the web link used on non-Windows devices. */
 var STORE_ID = '__STORE_ID__';
 var link = document.getElementById('store'), sub = document.getElementById('sub');
+/* count clicks on the Store button in Google Analytics */
+link.addEventListener('click', function () { if (window.gtag) gtag('event', 'store_click', { transport_type: 'beacon' }); });
 var hasId = /^9[A-Z0-9]{11}$/i.test(STORE_ID), isWin = /Windows NT 1[01]/.test(navigator.userAgent);
 var web = 'https://apps.microsoft.com/detail/' + STORE_ID + '?hl=en-us&gl=US&cid=website';
 var store = 'ms-windows-store://pdp/?PFN=' + PFN;
