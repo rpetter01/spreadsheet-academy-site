@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spreadsheet Academy · Learn Excel by doing it</title>
+<meta name="description" content="A hands-on Excel course for Windows: formulas, data, charts and PivotTables, practised in a real spreadsheet. 49 lessons, 311 checked exercises, works offline.">
+<meta property="og:title" content="Spreadsheet Academy · Learn Excel by doing it">
+<meta property="og:description" content="Hands-on Excel skills for work: formulas, data, charts and PivotTables. Get it on the Microsoft Store.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://learnexcel.online/assets/poster.jpg">
+<meta property="og:url" content="https://learnexcel.online/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://learnexcel.online/">
+<meta name="theme-color" content="#0f5a3a">
+<link rel="icon" href="assets/logo.png">
+<style>
+@font-face { font-family: Inter; src: url(assets/Inter-latin-1.woff2) format('woff2'); font-weight: 100 900; font-display: swap; }
+:root {
+  --ink: #0e1f17; --muted: #cfe7da; --brand: #217346; --brand-d: #0f5a3a; --accent: #7ee2a8;
+  --bg1: #17513a; --bg2: #0b1f16;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { font-family: Inter, 'Segoe UI', system-ui, sans-serif; color: #fff; background: radial-gradient(ellipse at 70% 40%, var(--bg1), var(--bg2) 72%); -webkit-font-smoothing: antialiased; }
+.screen { min-height: 100vh; min-height: 100dvh; display: grid; grid-template-rows: 1fr auto; padding: clamp(20px, 4vw, 56px); gap: 24px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(24px, 5vw, 72px); align-items: center; max-width: 1280px; width: 100%; margin: 0 auto; }
+.brand { display: flex; align-items: center; gap: 14px; font-weight: 800; font-size: 20px; letter-spacing: -.01em; margin-bottom: clamp(20px, 4vh, 44px); }
+.brand img { width: 48px; height: 48px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0, 0, 0, .35); }
+h1 { margin: 0; font-size: clamp(38px, 5.6vw, 74px); line-height: 1.02; letter-spacing: -.035em; font-weight: 800; }
+h1 em { font-style: normal; color: var(--accent); }
+.lead { margin: clamp(16px, 2.4vh, 26px) 0 0; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.5; color: var(--muted); max-width: 34em; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: clamp(18px, 3vh, 30px) 0 0; padding: 0; list-style: none; font-weight: 600; font-size: 16px; }
+.facts li::before { content: ''; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); margin-right: 9px; }
+.cta { display: inline-flex; align-items: center; gap: 12px; margin-top: clamp(24px, 4vh, 40px); background: #fff; color: var(--brand-d); font-weight: 800; font-size: 19px; padding: 16px 28px; border-radius: 14px; text-decoration: none; box-shadow: 0 10px 30px rgba(0, 0, 0, .3); transition: transform .15s, box-shadow .15s; }
+.cta:hover, .cta:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0, 0, 0, .38); outline: 3px solid var(--accent); outline-offset: 3px; }
+.cta svg { width: 22px; height: 22px; }
+.sub { margin: 14px 0 0; font-size: 14px; color: #9fd9b9; font-weight: 600; }
+.media { position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 70px rgba(0, 0, 0, .5); aspect-ratio: 16 / 9; background: #0b1f16; border: 1px solid rgba(255, 255, 255, .08); }
+.media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+footer { max-width: 1280px; width: 100%; margin: 0 auto; font-size: 12.5px; color: #8fc4a8; line-height: 1.5; display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; }
+footer a { color: inherit; }
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .media { order: -1; }
+  .brand { margin-bottom: 18px; }
+  .cta { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .cta { transition: none; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Spreadsheet Academy","applicationCategory":"EducationalApplication","operatingSystem":"Windows 10, Windows 11","description":"A hands-on course for Excel skills: formulas, data, charts and PivotTables, practised in a real spreadsheet. Works offline.","url":"https://learnexcel.online/","image":"https://learnexcel.online/assets/poster.jpg","publisher":{"@type":"Organization","name":"Heren Labs"}}</script>
+</head>
+<body>
+<main class="screen">
+  <section class="hero">
+    <div>
+      <div class="brand"><img src="assets/logo.png" alt="" width="48" height="48"><span>Spreadsheet Academy</span></div>
+      <h1>Learn Excel <em>by doing it.</em></h1>
+      <p class="lead">A hands-on course for the Excel skills employers ask for. Practise formulas, data, charts and PivotTables in a real spreadsheet, right on your PC.</p>
+      <ul class="facts"><li>49 hands-on lessons</li><li>311 checked exercises</li><li>Works offline</li></ul>
+      <a class="cta" id="store" href="#" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
+        <span>Get it on the Microsoft Store</span>
+      </a>
+      <p class="sub" id="sub">For Windows 10 and 11</p>
+    </div>
+    <div class="media">
+      <video autoplay muted loop playsinline preload="auto" poster="assets/poster.jpg" aria-label="A short tour of Spreadsheet Academy">
+        <source src="assets/promo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+  <footer>
+    <span>&copy; Heren Labs</span>
+    <span>Spreadsheet Academy is an independent course and is not affiliated with or endorsed by Microsoft. Excel is a trademark of Microsoft Corporation.</span>
+  </footer>
+</main>
+<script>
+/* Package Family Name of the app (identity in the MSIX manifest). On Windows it opens the Store listing without needing the Store ID.
+   Verify it against Partner Center > Product identity > Package family name. */
+var PFN = 'HerenLabs.SpreadsheetAcademyLearnXLSXSkills_4rr9weehh6kfm';
+/* The 12-character Store ID of the app (for example 9NABCDEF1234) is only needed for the web link used on non-Windows devices. */
+var STORE_ID = '__STORE_ID__';
+var link = document.getElementById('store'), sub = document.getElementById('sub');
+var hasId = /^9[A-Z0-9]{11}$/i.test(STORE_ID), isWin = /Windows NT 1[01]/.test(navigator.userAgent);
+var web = 'https://apps.microsoft.com/detail/' + STORE_ID + '?hl=en-us&gl=US&cid=website';
+var store = 'ms-windows-store://pdp/?PFN=' + PFN;
+if (isWin) { link.href = store; }
+else if (hasId) { link.href = web; sub.textContent = 'Available for Windows 10 and 11. Open the link on your PC to install.'; }
+else { link.href = '#'; sub.textContent = 'Available for Windows 10 and 11. Open this page on your PC to install.'; link.addEventListener('click', function (e) { e.preventDefault(); }); }
+</script>
+</body>
+</html>
