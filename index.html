@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>(function(){try{var s=localStorage.getItem("sa-lang");var l=(navigator.languages&&navigator.languages[0])||navigator.language||"";if(!s&&/^pt/i.test(l)&&location.search.indexOf("nolang")<0)location.replace("pt/"+location.search+location.hash);}catch(e){}})();</script>
 <!-- Google tag (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9YZ1BSCE1"></script>
 <script>
@@ -19,6 +20,9 @@ gtag('config', 'G-K9YZ1BSCE1');
 <meta property="og:image" content="https://learnexcel.online/assets/poster.jpg">
 <meta property="og:url" content="https://learnexcel.online/">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://learnexcel.online/">
+<link rel="alternate" hreflang="pt-BR" href="https://learnexcel.online/pt/">
+<link rel="alternate" hreflang="x-default" href="https://learnexcel.online/">
 <link rel="canonical" href="https://learnexcel.online/">
 <meta name="theme-color" content="#0f5a3a">
 <link rel="icon" href="assets/logo.png">
@@ -33,6 +37,9 @@ html, body { height: 100%; margin: 0; }
 body { font-family: Inter, 'Segoe UI', system-ui, sans-serif; color: #fff; background: radial-gradient(ellipse at 70% 40%, var(--bg1), var(--bg2) 72%); -webkit-font-smoothing: antialiased; }
 .screen { min-height: 100vh; min-height: 100dvh; display: grid; grid-template-rows: 1fr auto; padding: clamp(20px, 4vw, 56px); gap: 24px; }
 .hero { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.5fr); gap: clamp(24px, 4vw, 56px); align-items: center; max-width: 1560px; width: 100%; margin: 0 auto; }
+.lang { position: absolute; top: clamp(18px, 3vw, 36px); right: clamp(20px, 4vw, 56px); font-size: 15px; font-weight: 700; z-index: 2; }
+.lang a { color: #fff; text-decoration: none; padding: 8px 14px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.07); }
+.lang a:hover, .lang a:focus-visible { background: rgba(255,255,255,.16); outline: 2px solid var(--accent); }
 .brand { display: flex; align-items: center; gap: 14px; font-weight: 800; font-size: 20px; letter-spacing: -.01em; margin-bottom: clamp(20px, 4vh, 44px); }
 .brand img { width: 48px; height: 48px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0, 0, 0, .35); }
 h1 { margin: 0; font-size: clamp(36px, 4.6vw, 66px); line-height: 1.02; letter-spacing: -.035em; font-weight: 800; }
@@ -60,6 +67,7 @@ footer a { color: inherit; }
 </head>
 <body>
 <main class="screen">
+  <div class="lang"><a href="pt/" hreflang="pt-BR" lang="pt-BR" onclick="try{localStorage.setItem('sa-lang','pt')}catch(e){}">Português</a></div>
   <section class="hero">
     <div>
       <div class="brand"><img src="assets/logo.png" alt="" width="48" height="48"><span>Spreadsheet Academy</span></div>
