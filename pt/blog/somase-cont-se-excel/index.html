@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9YZ1BSCE1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K9YZ1BSCE1');</script>
+<title>SOMASE e CONT.SE no Excel: Some e Conte com uma Condição · Spreadsheet Academy</title>
+<meta name="description" content="Aprenda SOMASE e CONT.SE no Excel com uma tabela de vendas: total por região, contagem acima de um valor e como passar para o SOMASES com mais de uma condição.">
+<link rel="canonical" href="https://learnexcel.online/pt/blog/somase-cont-se-excel/">
+<link rel="alternate" hreflang="en" href="https://learnexcel.online/blog/excel-sumif-countif/">
+<link rel="alternate" hreflang="pt-BR" href="https://learnexcel.online/pt/blog/somase-cont-se-excel/">
+<link rel="alternate" hreflang="x-default" href="https://learnexcel.online/blog/excel-sumif-countif/">
+<meta property="og:title" content="SOMASE e CONT.SE no Excel: Some e Conte com uma Condição · Spreadsheet Academy">
+<meta property="og:description" content="Aprenda SOMASE e CONT.SE no Excel com uma tabela de vendas: total por região, contagem acima de um valor e como passar para o SOMASES com mais de uma condição.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://learnexcel.online/pt/blog/somase-cont-se-excel/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://learnexcel.online/assets/poster-pt.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f5a3a">
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SOMASE e CONT.SE no Excel: Some e Conte com uma Condição","description":"Aprenda SOMASE e CONT.SE no Excel com uma tabela de vendas: total por região, contagem acima de um valor e como passar para o SOMASES com mais de uma condição.","inLanguage":"pt-BR","datePublished":"2026-11-18","dateModified":"2026-11-18","mainEntityOfPage":"https://learnexcel.online/pt/blog/somase-cont-se-excel/","image":"https://learnexcel.online/assets/poster-pt.jpg","author":{"@type":"Organization","name":"Heren Labs"},"publisher":{"@type":"Organization","name":"Heren Labs","logo":{"@type":"ImageObject","url":"https://learnexcel.online/assets/logo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Spreadsheet Academy","item":"https://learnexcel.online/pt/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://learnexcel.online/pt/blog/"},{"@type":"ListItem","position":3,"name":"SOMASE e CONT.SE no Excel: Some e Conte com uma Condição","item":"https://learnexcel.online/pt/blog/somase-cont-se-excel/"}]}</script>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="/pt/"><img src="/assets/logo.png" alt="" width="34" height="34"><span>Spreadsheet Academy</span></a>
+  <nav><a href="/pt/blog/">Blog</a><a class="pill" href="/blog/excel-sumif-countif/" hreflang="en" lang="en" title="Read this guide in English">English</a></nav>
+</div></header>
+<main class="wrap art">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/pt/">Início</a> / <a href="/pt/blog/">Blog</a></nav>
+  <article>
+    <h1>SOMASE e CONT.SE no Excel: Some e Conte com uma Condição</h1>
+    <p class="meta">Publicado em 18 de novembro de 2026 · 5 min de leitura</p>
+    <p class="lead">SOMA soma tudo e CONT.NÚM conta tudo. SOMASE e CONT.SE fazem o mesmo, mas só para as linhas que atendem a uma condição: o total de uma região, o número de vendas acima de um valor. Veja como usar.</p>
+<h2>A tabela de exemplo</h2>
+<p>Estas vendas estão em A1:C6:</p>
+<div class="tw"><table><thead><tr><th></th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>1</td><td>Região</td><td>Vendedor</td><td>Vendas</td></tr><tr><td>2</td><td>Norte</td><td>Ana</td><td>1200</td></tr><tr><td>3</td><td>Sul</td><td>Bruno</td><td>800</td></tr><tr><td>4</td><td>Norte</td><td>Carla</td><td>1500</td></tr><tr><td>5</td><td>Leste</td><td>Davi</td><td>900</td></tr><tr><td>6</td><td>Sul</td><td>Elisa</td><td>1100</td></tr></tbody></table></div>
+<h2>SOMASE: some um grupo</h2>
+<pre><code>=SOMASE(intervalo; critérios; [intervalo_soma])</code></pre>
+<ul><li><b>intervalo</b> é onde o Excel verifica a condição.</li><li><b>critérios</b> é a condição.</li><li><b>intervalo_soma</b> é a coluna a somar.</li></ul>
+<p>O total de vendas da região Norte:</p>
+<pre><code>=SOMASE(A2:A6;"Norte";C2:C6)</code></pre>
+<p>O Excel olha <code>A2:A6</code>, encontra as linhas que dizem Norte (linhas 2 e 4) e soma os valores correspondentes da coluna C: 1200 + 1500 = <b>2700</b>.</p>
+<h2>CONT.SE: conte um grupo</h2>
+<pre><code>=CONT.SE(intervalo; critérios)</code></pre>
+<p>Quantas vendas vieram do Norte?</p>
+<pre><code>=CONT.SE(A2:A6;"Norte")</code></pre>
+<p>A resposta é <b>2</b>.</p>
+<h2>Condições com sinais de comparação</h2>
+<p>O critério também pode ser uma comparação. O sinal vai dentro das aspas, junto com o número:</p>
+<pre><code>=CONT.SE(C2:C6;"&gt;1000")</code></pre>
+<p>Isso conta as vendas acima de 1000: 1200, 1500 e 1100, então a resposta é <b>3</b>. Para somar essas vendas, o intervalo e o intervalo de soma são a mesma coluna, e você pode omitir a terceira parte:</p>
+<pre><code>=SOMASE(C2:C6;"&gt;1000")</code></pre>
+<p>A resposta é 1200 + 1500 + 1100 = <b>3800</b>.</p>
+<h2>Use uma célula como condição</h2>
+<p>Se você digitar a região em E2, pode apontar para ela, e a fórmula funciona para qualquer região digitada:</p>
+<pre><code>=SOMASE(A2:A6;E2;C2:C6)</code></pre>
+<p>Para juntar um sinal e uma célula, una os dois com <code>&amp;</code>: <code>"&gt;"&amp;E2</code>.</p>
+<h2>Mais de uma condição: SOMASES e CONT.SES</h2>
+<p>Quando precisar de duas ou mais condições ao mesmo tempo, acrescente o S. No SOMASES, a coluna a somar vem <b>primeiro</b>:</p>
+<pre><code>=SOMASES(C2:C6;A2:A6;"Norte";C2:C6;"&gt;1200")</code></pre>
+<p>Só contam as vendas do Norte acima de 1200, o que deixa os 1500 da Carla, então a resposta é <b>1500</b>.</p>
+<h2>Erros comuns</h2>
+<ul>
+<li><b>Intervalos de tamanhos diferentes.</b> O intervalo e o intervalo de soma precisam ter o mesmo número de linhas.</li>
+<li><b>Sinal sem aspas.</b> Escreva <code>"&gt;1000"</code>, não <code>&gt;1000</code>.</li>
+<li><b>Trocar a ordem no SOMASES.</b> Lá a coluna a somar sempre vem primeiro, diferente do SOMASE.</li>
+</ul>
+  </article>
+  <aside class="cta-box"><h2>Pratique em uma planilha de verdade</h2><p>O Spreadsheet Academy ensina isso na aula “Contar e somar com condições”: 5 passos curtos em um Excel simulado, com correção na hora.</p>
+<a class="store" href="#" rel="noopener" data-store><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg><span>Baixar na Microsoft Store</span></a></aside>
+  <section class="more"><h2>Mais guias</h2><ul><li><a href="/pt/blog/funcao-se-excel/">Função SE no Excel: Exemplos Simples que Fazem Sentido</a></li><li><a href="/pt/blog/procv-excel-passo-a-passo/">PROCV no Excel, Passo a Passo: Encontre um Preço na Tabela</a></li></ul></section>
+</main>
+<footer class="foot"><div class="wrap"><span>&copy; Heren Labs</span><span>O Spreadsheet Academy é um curso independente e não é afiliado nem endossado pela Microsoft. Excel é marca registrada da Microsoft Corporation.</span></div></footer>
+<script src="/assets/store.js"></script>
+</body>
+</html>

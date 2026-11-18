@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9YZ1BSCE1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K9YZ1BSCE1');</script>
+<title>Função SE no Excel: Exemplos Simples que Fazem Sentido · Spreadsheet Academy</title>
+<meta name="description" content="Aprenda a função SE do Excel com exemplos simples: aprovado ou reprovado, cálculo de bônus e comparação de texto. Com os erros mais comuns e como corrigi-los.">
+<link rel="canonical" href="https://learnexcel.online/pt/blog/funcao-se-excel/">
+<link rel="alternate" hreflang="en" href="https://learnexcel.online/blog/excel-if-function/">
+<link rel="alternate" hreflang="pt-BR" href="https://learnexcel.online/pt/blog/funcao-se-excel/">
+<link rel="alternate" hreflang="x-default" href="https://learnexcel.online/blog/excel-if-function/">
+<meta property="og:title" content="Função SE no Excel: Exemplos Simples que Fazem Sentido · Spreadsheet Academy">
+<meta property="og:description" content="Aprenda a função SE do Excel com exemplos simples: aprovado ou reprovado, cálculo de bônus e comparação de texto. Com os erros mais comuns e como corrigi-los.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://learnexcel.online/pt/blog/funcao-se-excel/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://learnexcel.online/assets/poster-pt.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f5a3a">
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Função SE no Excel: Exemplos Simples que Fazem Sentido","description":"Aprenda a função SE do Excel com exemplos simples: aprovado ou reprovado, cálculo de bônus e comparação de texto. Com os erros mais comuns e como corrigi-los.","inLanguage":"pt-BR","datePublished":"2026-11-18","dateModified":"2026-11-18","mainEntityOfPage":"https://learnexcel.online/pt/blog/funcao-se-excel/","image":"https://learnexcel.online/assets/poster-pt.jpg","author":{"@type":"Organization","name":"Heren Labs"},"publisher":{"@type":"Organization","name":"Heren Labs","logo":{"@type":"ImageObject","url":"https://learnexcel.online/assets/logo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Spreadsheet Academy","item":"https://learnexcel.online/pt/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://learnexcel.online/pt/blog/"},{"@type":"ListItem","position":3,"name":"Função SE no Excel: Exemplos Simples que Fazem Sentido","item":"https://learnexcel.online/pt/blog/funcao-se-excel/"}]}</script>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="/pt/"><img src="/assets/logo.png" alt="" width="34" height="34"><span>Spreadsheet Academy</span></a>
+  <nav><a href="/pt/blog/">Blog</a><a class="pill" href="/blog/excel-if-function/" hreflang="en" lang="en" title="Read this guide in English">English</a></nav>
+</div></header>
+<main class="wrap art">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/pt/">Início</a> / <a href="/pt/blog/">Blog</a></nav>
+  <article>
+    <h1>Função SE no Excel: Exemplos Simples que Fazem Sentido</h1>
+    <p class="meta">Publicado em 18 de novembro de 2026 · 6 min de leitura</p>
+    <p class="lead">A função SE faz a planilha tomar uma decisão por você: se algo for verdadeiro, mostra um resultado; se não for, mostra outro. Veja como ela funciona, com exemplos para copiar.</p>
+<h2>Como a função SE funciona</h2>
+<p>A função SE tem três partes, separadas por ponto e vírgula:</p>
+<pre><code>=SE(teste; valor_se_verdadeiro; valor_se_falso)</code></pre>
+<ul><li><b>teste</b> é uma pergunta que o Excel responde com verdadeiro ou falso, como <code>B2&gt;=60</code>.</li><li><b>valor_se_verdadeiro</b> é o que aparece quando a resposta é verdadeira.</li><li><b>valor_se_falso</b> é o que aparece quando é falsa.</li></ul>
+<h2>Exemplo 1: aprovado ou reprovado</h2>
+<p>Um professor quer marcar como aprovada toda nota igual ou maior que 60. As notas estão na coluna B, e o resultado vai na coluna C:</p>
+<div class="tw"><table><thead><tr><th></th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>1</td><td>Aluno</td><td>Nota</td><td>Resultado</td></tr><tr><td>2</td><td>Ana</td><td>45</td><td><b>Reprovado</b></td></tr><tr><td>3</td><td>Bruno</td><td>72</td><td><b>Aprovado</b></td></tr><tr><td>4</td><td>Carla</td><td>60</td><td><b>Aprovado</b></td></tr></tbody></table></div>
+<p>Na célula C2, digite:</p>
+<pre><code>=SE(B2&gt;=60;"Aprovado";"Reprovado")</code></pre>
+<p>O teste é <code>B2&gt;=60</code>, que se lê "B2 é maior ou igual a 60". A Ana tem 45, então o teste é falso e o Excel mostra <b>Reprovado</b>. A Carla tem exatamente 60 e, por causa do <code>&gt;=</code>, ela passa. Resultados em texto vão entre aspas duplas.</p>
+<h3>Os sinais de comparação</h3>
+<div class="tw"><table><thead><tr><th>Sinal</th><th>Significado</th><th>Exemplo</th></tr></thead><tbody><tr><td><code>=</code></td><td>igual a</td><td><code>A1="Sim"</code></td></tr><tr><td><code>&lt;&gt;</code></td><td>diferente de</td><td><code>A1&lt;&gt;0</code></td></tr><tr><td><code>&gt;</code></td><td>maior que</td><td><code>A1&gt;100</code></td></tr><tr><td><code>&lt;</code></td><td>menor que</td><td><code>A1&lt;100</code></td></tr><tr><td><code>&gt;=</code></td><td>maior ou igual a</td><td><code>A1&gt;=60</code></td></tr><tr><td><code>&lt;=</code></td><td>menor ou igual a</td><td><code>A1&lt;=60</code></td></tr></tbody></table></div>
+<h2>Exemplo 2: calcular em vez de mostrar texto</h2>
+<p>Os resultados do SE não precisam ser palavras. Uma empresa paga 10% de bônus sobre vendas acima de 10.000, e nada nos outros casos. As vendas estão na coluna B:</p>
+<pre><code>=SE(B2&gt;10000;B2*0,1;0)</code></pre>
+<p>Com uma venda de 12.000, o teste é verdadeiro, então o Excel calcula 12.000 × 0,1 e mostra <b>1.200</b>. Com uma venda de 8.000, o teste é falso, e o resultado é <b>0</b>. Copie a fórmula para baixo e cada linha recebe a sua resposta.</p>
+<h2>Exemplo 3: comparar texto</h2>
+<p>Para marcar cada fatura como paga ou em aberto, conforme a palavra da coluna C:</p>
+<pre><code>=SE(C2="Sim";"Paga";"Em aberto")</code></pre>
+<p>Texto em uma fórmula sempre vai entre aspas. O SE não diferencia maiúsculas de minúsculas: "sim", "Sim" e "SIM" são iguais.</p>
+<h2>Erros comuns</h2>
+<ul>
+<li><b>Esquecer as aspas no texto.</b> <code>=SE(B2&gt;=60;Aprovado;Reprovado)</code> mostra o erro <code>#NOME?</code>, porque o Excel acha que Aprovado é um nome.</li>
+<li><b>Usar &gt; quando era &gt;=.</b> Com <code>B2&gt;60</code>, uma nota exatamente 60 reprova. Confira sempre os valores da fronteira.</li>
+<li><b>Deixar a terceira parte em branco.</b> Se o teste for falso e você não indicou o valor_se_falso, o Excel mostra <code>FALSO</code>.</li>
+<li><b>Vírgula ou ponto e vírgula.</b> No Excel em português, as partes costumam ser separadas por ponto e vírgula, e os decimais usam vírgula: <code>B2*0,1</code>. Se você usar vírgula no lugar do ponto e vírgula, aparece um erro.</li>
+</ul>
+<h2>O que aprender depois</h2>
+<p>Quando o SE ficar natural, combine vários testes com <code>E</code> e <code>OU</code>, e use <code>SES</code> ou SE dentro de SE quando houver mais de dois resultados.</p>
+  </article>
+  <aside class="cta-box"><h2>Pratique em uma planilha de verdade</h2><p>O Spreadsheet Academy ensina isso na aula “Decisões com IF”: 6 passos curtos em um Excel simulado, com correção na hora.</p>
+<a class="store" href="#" rel="noopener" data-store><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg><span>Baixar na Microsoft Store</span></a></aside>
+  <section class="more"><h2>Mais guias</h2><ul><li><a href="/pt/blog/procv-excel-passo-a-passo/">PROCV no Excel, Passo a Passo: Encontre um Preço na Tabela</a></li><li><a href="/pt/blog/somase-cont-se-excel/">SOMASE e CONT.SE no Excel: Some e Conte com uma Condição</a></li></ul></section>
+</main>
+<footer class="foot"><div class="wrap"><span>&copy; Heren Labs</span><span>O Spreadsheet Academy é um curso independente e não é afiliado nem endossado pela Microsoft. Excel é marca registrada da Microsoft Corporation.</span></div></footer>
+<script src="/assets/store.js"></script>
+</body>
+</html>

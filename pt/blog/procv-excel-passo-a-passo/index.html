@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9YZ1BSCE1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K9YZ1BSCE1');</script>
+<title>PROCV no Excel, Passo a Passo: Encontre um Preço na Tabela · Spreadsheet Academy</title>
+<meta name="description" content="Como usar o PROCV no Excel com uma lista de preços: os quatro argumentos, por que usar FALSO, como corrigir o erro #N/D e quando usar o PROCX.">
+<link rel="canonical" href="https://learnexcel.online/pt/blog/procv-excel-passo-a-passo/">
+<link rel="alternate" hreflang="en" href="https://learnexcel.online/blog/excel-vlookup-step-by-step/">
+<link rel="alternate" hreflang="pt-BR" href="https://learnexcel.online/pt/blog/procv-excel-passo-a-passo/">
+<link rel="alternate" hreflang="x-default" href="https://learnexcel.online/blog/excel-vlookup-step-by-step/">
+<meta property="og:title" content="PROCV no Excel, Passo a Passo: Encontre um Preço na Tabela · Spreadsheet Academy">
+<meta property="og:description" content="Como usar o PROCV no Excel com uma lista de preços: os quatro argumentos, por que usar FALSO, como corrigir o erro #N/D e quando usar o PROCX.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://learnexcel.online/pt/blog/procv-excel-passo-a-passo/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://learnexcel.online/assets/poster-pt.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f5a3a">
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PROCV no Excel, Passo a Passo: Encontre um Preço na Tabela","description":"Como usar o PROCV no Excel com uma lista de preços: os quatro argumentos, por que usar FALSO, como corrigir o erro #N/D e quando usar o PROCX.","inLanguage":"pt-BR","datePublished":"2026-11-18","dateModified":"2026-11-18","mainEntityOfPage":"https://learnexcel.online/pt/blog/procv-excel-passo-a-passo/","image":"https://learnexcel.online/assets/poster-pt.jpg","author":{"@type":"Organization","name":"Heren Labs"},"publisher":{"@type":"Organization","name":"Heren Labs","logo":{"@type":"ImageObject","url":"https://learnexcel.online/assets/logo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Spreadsheet Academy","item":"https://learnexcel.online/pt/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://learnexcel.online/pt/blog/"},{"@type":"ListItem","position":3,"name":"PROCV no Excel, Passo a Passo: Encontre um Preço na Tabela","item":"https://learnexcel.online/pt/blog/procv-excel-passo-a-passo/"}]}</script>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="/pt/"><img src="/assets/logo.png" alt="" width="34" height="34"><span>Spreadsheet Academy</span></a>
+  <nav><a href="/pt/blog/">Blog</a><a class="pill" href="/blog/excel-vlookup-step-by-step/" hreflang="en" lang="en" title="Read this guide in English">English</a></nav>
+</div></header>
+<main class="wrap art">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/pt/">Início</a> / <a href="/pt/blog/">Blog</a></nav>
+  <article>
+    <h1>PROCV no Excel, Passo a Passo: Encontre um Preço na Tabela</h1>
+    <p class="meta">Publicado em 18 de novembro de 2026 · 8 min de leitura</p>
+    <p class="lead">O PROCV procura um valor na primeira coluna de uma tabela e traz algo de outra coluna da mesma linha. É a forma clássica de buscar um preço, um nome ou uma categoria. Veja como usar, passo a passo.</p>
+<h2>O que o PROCV faz</h2>
+<p>Você informa um código, e ele devolve o item correspondente da tabela. A fórmula tem quatro partes:</p>
+<pre><code>=PROCV(valor_procurado; matriz_tabela; núm_índice_coluna; [procurar_intervalo])</code></pre>
+<ul><li><b>valor_procurado</b> é o que você procura, como um código de produto.</li><li><b>matriz_tabela</b> é a tabela onde o Excel vai procurar. O valor procurado precisa estar na <b>primeira coluna</b> dela.</li><li><b>núm_índice_coluna</b> é o número da coluna a devolver, contando a partir da primeira coluna da tabela.</li><li><b>procurar_intervalo</b> é <code>FALSO</code> para correspondência exata, que é o que você quer quase sempre.</li></ul>
+<h2>Um exemplo com lista de preços</h2>
+<p>Esta lista de preços está em A1:C4:</p>
+<div class="tw"><table><thead><tr><th></th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>1</td><td>Código</td><td>Produto</td><td>Preço</td></tr><tr><td>2</td><td>A101</td><td>Caderno</td><td>4,50</td></tr><tr><td>3</td><td>A102</td><td>Caixa de canetas</td><td>12,00</td></tr><tr><td>4</td><td>A103</td><td>Mochila</td><td>39,90</td></tr></tbody></table></div>
+<p>Em E2 você digita um código, por exemplo <b>A103</b>, e em F2 quer o preço dele:</p>
+<pre><code>=PROCV(E2;A2:C4;3;FALSO)</code></pre>
+<ol><li>O Excel pega o código em <code>E2</code> (A103).</li><li>Procura na primeira coluna de <code>A2:C4</code> e encontra na linha 4.</li><li>Devolve o valor da <b>3ª coluna</b> da tabela (Preço), que é <b>39,90</b>.</li><li><code>FALSO</code> diz ao Excel para aceitar só a correspondência exata.</li></ol>
+<h2>Por que usar FALSO</h2>
+<p>Se você deixar essa última parte de fora, ou escrever <code>VERDADEIRO</code>, o Excel faz uma correspondência aproximada. Isso só funciona se a primeira coluna estiver em ordem crescente, e, se não estiver, ele devolve uma resposta errada sem avisar. Escreva <code>FALSO</code>, a menos que esteja trabalhando com faixas, como as de imposto.</p>
+<h2>Trave a tabela com cifrões</h2>
+<p>Quando você copia a fórmula para baixo, a referência da tabela andaria junto. Os cifrões a mantêm fixa:</p>
+<pre><code>=PROCV(E2;$A$2:$C$4;3;FALSO)</code></pre>
+<h2>Quando aparece #N/D</h2>
+<p><code>#N/D</code> significa que o valor não foi encontrado. Procure um erro de digitação no código, um espaço sobrando no final ou um número guardado como texto. Para mostrar uma mensagem amigável no lugar do erro:</p>
+<pre><code>=SEERRO(PROCV(E2;$A$2:$C$4;3;FALSO);"Não encontrado")</code></pre>
+<h2>Os limites do PROCV</h2>
+<ul>
+<li>Ele só olha para a <b>direita</b>: o valor procurado precisa estar na primeira coluna.</li>
+<li>O número da coluna quebra se alguém inserir uma coluna dentro da tabela.</li>
+</ul>
+<p>Duas alternativas resolvem isso. O <code>PROCX</code>, disponível no Microsoft 365 e no Excel 2021 em diante, faz o mesmo trabalho com intervalos separados, por exemplo <code>=PROCX(E2;A2:A4;C2:C4)</code>. E o <code>ÍNDICE</code> com <code>CORRESP</code> funciona em todas as versões.</p>
+  </article>
+  <aside class="cta-box"><h2>Pratique em uma planilha de verdade</h2><p>O Spreadsheet Academy ensina isso na aula “Procuras”: 7 passos curtos em um Excel simulado, com correção na hora.</p>
+<a class="store" href="#" rel="noopener" data-store><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg><span>Baixar na Microsoft Store</span></a></aside>
+  <section class="more"><h2>Mais guias</h2><ul><li><a href="/pt/blog/funcao-se-excel/">Função SE no Excel: Exemplos Simples que Fazem Sentido</a></li><li><a href="/pt/blog/somase-cont-se-excel/">SOMASE e CONT.SE no Excel: Some e Conte com uma Condição</a></li></ul></section>
+</main>
+<footer class="foot"><div class="wrap"><span>&copy; Heren Labs</span><span>O Spreadsheet Academy é um curso independente e não é afiliado nem endossado pela Microsoft. Excel é marca registrada da Microsoft Corporation.</span></div></footer>
+<script src="/assets/store.js"></script>
+</body>
+</html>

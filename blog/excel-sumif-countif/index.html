@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9YZ1BSCE1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K9YZ1BSCE1');</script>
+<title>SUMIF and COUNTIF in Excel: Add and Count With a Condition · Spreadsheet Academy</title>
+<meta name="description" content="Learn SUMIF and COUNTIF in Excel with a small sales table: totals by region, counts above a number, and how to move to SUMIFS for more than one condition.">
+<link rel="canonical" href="https://learnexcel.online/blog/excel-sumif-countif/">
+<link rel="alternate" hreflang="en" href="https://learnexcel.online/blog/excel-sumif-countif/">
+<link rel="alternate" hreflang="pt-BR" href="https://learnexcel.online/pt/blog/somase-cont-se-excel/">
+<link rel="alternate" hreflang="x-default" href="https://learnexcel.online/blog/excel-sumif-countif/">
+<meta property="og:title" content="SUMIF and COUNTIF in Excel: Add and Count With a Condition · Spreadsheet Academy">
+<meta property="og:description" content="Learn SUMIF and COUNTIF in Excel with a small sales table: totals by region, counts above a number, and how to move to SUMIFS for more than one condition.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://learnexcel.online/blog/excel-sumif-countif/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://learnexcel.online/assets/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f5a3a">
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SUMIF and COUNTIF in Excel: Add and Count With a Condition","description":"Learn SUMIF and COUNTIF in Excel with a small sales table: totals by region, counts above a number, and how to move to SUMIFS for more than one condition.","inLanguage":"en","datePublished":"2026-11-18","dateModified":"2026-11-18","mainEntityOfPage":"https://learnexcel.online/blog/excel-sumif-countif/","image":"https://learnexcel.online/assets/poster.jpg","author":{"@type":"Organization","name":"Heren Labs"},"publisher":{"@type":"Organization","name":"Heren Labs","logo":{"@type":"ImageObject","url":"https://learnexcel.online/assets/logo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Spreadsheet Academy","item":"https://learnexcel.online/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://learnexcel.online/blog/"},{"@type":"ListItem","position":3,"name":"SUMIF and COUNTIF in Excel: Add and Count With a Condition","item":"https://learnexcel.online/blog/excel-sumif-countif/"}]}</script>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34"><span>Spreadsheet Academy</span></a>
+  <nav><a href="/blog/">Blog</a><a class="pill" href="/pt/blog/somase-cont-se-excel/" hreflang="pt-BR" lang="pt-BR" title="Read this guide in Portuguese">Português</a></nav>
+</div></header>
+<main class="wrap art">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a></nav>
+  <article>
+    <h1>SUMIF and COUNTIF in Excel: Add and Count With a Condition</h1>
+    <p class="meta">Published November 18, 2026 · 5 min read</p>
+    <p class="lead">SUM adds everything and COUNT counts everything. SUMIF and COUNTIF do the same, but only for the rows that match a condition: the total for one region, the number of sales above a value. Here is how to use them.</p>
+<h2>The sample table</h2>
+<p>These sales are in A1:C6:</p>
+<div class="tw"><table><thead><tr><th></th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>1</td><td>Region</td><td>Seller</td><td>Sales</td></tr><tr><td>2</td><td>North</td><td>Ana</td><td>1200</td></tr><tr><td>3</td><td>South</td><td>Ben</td><td>800</td></tr><tr><td>4</td><td>North</td><td>Cy</td><td>1500</td></tr><tr><td>5</td><td>East</td><td>Dee</td><td>900</td></tr><tr><td>6</td><td>South</td><td>Eli</td><td>1100</td></tr></tbody></table></div>
+<h2>SUMIF: add up one group</h2>
+<pre><code>=SUMIF(range, criteria, [sum_range])</code></pre>
+<ul><li><b>range</b> is where Excel checks the condition.</li><li><b>criteria</b> is the condition.</li><li><b>sum_range</b> is the column to add up.</li></ul>
+<p>The total sales of the North region:</p>
+<pre><code>=SUMIF(A2:A6,"North",C2:C6)</code></pre>
+<p>Excel looks at <code>A2:A6</code>, finds the rows that say North (rows 2 and 4), and adds the matching values in column C: 1200 + 1500 = <b>2700</b>.</p>
+<h2>COUNTIF: count one group</h2>
+<pre><code>=COUNTIF(range, criteria)</code></pre>
+<p>How many sales came from the North?</p>
+<pre><code>=COUNTIF(A2:A6,"North")</code></pre>
+<p>The answer is <b>2</b>.</p>
+<h2>Conditions with comparison signs</h2>
+<p>The criteria can also be a comparison. The sign goes inside the quotes, together with the number:</p>
+<pre><code>=COUNTIF(C2:C6,"&gt;1000")</code></pre>
+<p>This counts the sales above 1000: 1200, 1500 and 1100, so the answer is <b>3</b>. To add them up instead, the range and the sum range are the same column, so you can leave the third part out:</p>
+<pre><code>=SUMIF(C2:C6,"&gt;1000")</code></pre>
+<p>The answer is 1200 + 1500 + 1100 = <b>3800</b>.</p>
+<h2>Use a cell as the condition</h2>
+<p>If you type the region in E2, you can point to it, and the formula works for any region you type:</p>
+<pre><code>=SUMIF(A2:A6,E2,C2:C6)</code></pre>
+<p>To combine a sign with a cell, join them with <code>&amp;</code>: <code>"&gt;"&amp;E2</code>.</p>
+<h2>More than one condition: SUMIFS and COUNTIFS</h2>
+<p>When you need two or more conditions at once, add an S. In SUMIFS the column to add up comes <b>first</b>:</p>
+<pre><code>=SUMIFS(C2:C6,A2:A6,"North",C2:C6,"&gt;1200")</code></pre>
+<p>Only the North sales above 1200 count, which leaves Cy's 1500, so the answer is <b>1500</b>.</p>
+<h2>Common mistakes</h2>
+<ul>
+<li><b>Ranges of different sizes.</b> The range and the sum range must have the same number of rows.</li>
+<li><b>A sign without quotes.</b> Write <code>"&gt;1000"</code>, not <code>&gt;1000</code>.</li>
+<li><b>Mixing the order in SUMIFS.</b> The column to add up always comes first there, unlike in SUMIF.</li>
+</ul>
+  </article>
+  <aside class="cta-box"><h2>Practice it in a real spreadsheet</h2><p>Spreadsheet Academy teaches this in the “Count & sum with conditions” lesson: 5 short steps in a simulated Excel, with instant feedback.</p>
+<a class="store" href="#" rel="noopener" data-store><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg><span>Get it on the Microsoft Store</span></a></aside>
+  <section class="more"><h2>More guides</h2><ul><li><a href="/blog/excel-if-function/">IF Function in Excel: Simple Examples That Make Sense</a></li><li><a href="/blog/excel-vlookup-step-by-step/">VLOOKUP in Excel, Step by Step: Find a Price in a Table</a></li></ul></section>
+</main>
+<footer class="foot"><div class="wrap"><span>&copy; Heren Labs</span><span>Spreadsheet Academy is an independent course and is not affiliated with or endorsed by Microsoft. Excel is a trademark of Microsoft Corporation.</span></div></footer>
+<script src="/assets/store.js"></script>
+</body>
+</html>

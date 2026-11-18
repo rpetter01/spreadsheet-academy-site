@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9YZ1BSCE1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K9YZ1BSCE1');</script>
+<title>VLOOKUP in Excel, Step by Step: Find a Price in a Table · Spreadsheet Academy</title>
+<meta name="description" content="How to use VLOOKUP in Excel with a simple price list: the four arguments, why you need FALSE, how to fix #N/A, and when to use XLOOKUP instead.">
+<link rel="canonical" href="https://learnexcel.online/blog/excel-vlookup-step-by-step/">
+<link rel="alternate" hreflang="en" href="https://learnexcel.online/blog/excel-vlookup-step-by-step/">
+<link rel="alternate" hreflang="pt-BR" href="https://learnexcel.online/pt/blog/procv-excel-passo-a-passo/">
+<link rel="alternate" hreflang="x-default" href="https://learnexcel.online/blog/excel-vlookup-step-by-step/">
+<meta property="og:title" content="VLOOKUP in Excel, Step by Step: Find a Price in a Table · Spreadsheet Academy">
+<meta property="og:description" content="How to use VLOOKUP in Excel with a simple price list: the four arguments, why you need FALSE, how to fix #N/A, and when to use XLOOKUP instead.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://learnexcel.online/blog/excel-vlookup-step-by-step/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://learnexcel.online/assets/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f5a3a">
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"VLOOKUP in Excel, Step by Step: Find a Price in a Table","description":"How to use VLOOKUP in Excel with a simple price list: the four arguments, why you need FALSE, how to fix #N/A, and when to use XLOOKUP instead.","inLanguage":"en","datePublished":"2026-11-18","dateModified":"2026-11-18","mainEntityOfPage":"https://learnexcel.online/blog/excel-vlookup-step-by-step/","image":"https://learnexcel.online/assets/poster.jpg","author":{"@type":"Organization","name":"Heren Labs"},"publisher":{"@type":"Organization","name":"Heren Labs","logo":{"@type":"ImageObject","url":"https://learnexcel.online/assets/logo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Spreadsheet Academy","item":"https://learnexcel.online/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://learnexcel.online/blog/"},{"@type":"ListItem","position":3,"name":"VLOOKUP in Excel, Step by Step: Find a Price in a Table","item":"https://learnexcel.online/blog/excel-vlookup-step-by-step/"}]}</script>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34"><span>Spreadsheet Academy</span></a>
+  <nav><a href="/blog/">Blog</a><a class="pill" href="/pt/blog/procv-excel-passo-a-passo/" hreflang="pt-BR" lang="pt-BR" title="Read this guide in Portuguese">Português</a></nav>
+</div></header>
+<main class="wrap art">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a></nav>
+  <article>
+    <h1>VLOOKUP in Excel, Step by Step: Find a Price in a Table</h1>
+    <p class="meta">Published November 18, 2026 · 8 min read</p>
+    <p class="lead">VLOOKUP finds a value in the first column of a table and brings back something from another column in the same row. It is the classic way to look up a price, a name or a category. Here it is, step by step.</p>
+<h2>What VLOOKUP does</h2>
+<p>You give it a code, and it returns the matching item from the table. The formula has four parts:</p>
+<pre><code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code></pre>
+<ul><li><b>lookup_value</b> is what you are looking for, such as a product code.</li><li><b>table_array</b> is the table where Excel will look. The value you search for must be in its <b>first column</b>.</li><li><b>col_index_num</b> is the number of the column to return, counting from the first column of the table.</li><li><b>range_lookup</b> is <code>FALSE</code> for an exact match, which is what you want almost every time.</li></ul>
+<h2>An example with a price list</h2>
+<p>This price list is in A1:C4:</p>
+<div class="tw"><table><thead><tr><th></th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>1</td><td>Code</td><td>Product</td><td>Price</td></tr><tr><td>2</td><td>A101</td><td>Notebook</td><td>4.50</td></tr><tr><td>3</td><td>A102</td><td>Pen box</td><td>12.00</td></tr><tr><td>4</td><td>A103</td><td>Backpack</td><td>39.90</td></tr></tbody></table></div>
+<p>In E2 you type a code, for example <b>A103</b>, and in F2 you want its price:</p>
+<pre><code>=VLOOKUP(E2,A2:C4,3,FALSE)</code></pre>
+<ol><li>Excel takes the code in <code>E2</code> (A103).</li><li>It searches for it in the first column of <code>A2:C4</code>, and finds it in row 4.</li><li>It returns the value from the <b>3rd column</b> of the table (Price), which is <b>39.90</b>.</li><li><code>FALSE</code> tells Excel to accept only an exact match.</li></ol>
+<h2>Why you need FALSE</h2>
+<p>If you leave the last part out, or write <code>TRUE</code>, Excel does an approximate match. That only works when the first column is sorted from smallest to largest, and otherwise it quietly returns a wrong answer. Write <code>FALSE</code> unless you are working with ranges such as tax brackets.</p>
+<h2>Lock the table with dollar signs</h2>
+<p>When you copy the formula down, the table reference would shift with it. Add dollar signs to keep it fixed:</p>
+<pre><code>=VLOOKUP(E2,$A$2:$C$4,3,FALSE)</code></pre>
+<h2>When you see #N/A</h2>
+<p><code>#N/A</code> means the value was not found. Look for a typo in the code, an extra space at the end, or a number stored as text. To show a friendly message instead of the error:</p>
+<pre><code>=IFERROR(VLOOKUP(E2,$A$2:$C$4,3,FALSE),"Not found")</code></pre>
+<h2>The limits of VLOOKUP</h2>
+<ul>
+<li>It can only look to the <b>right</b>: the value you search for has to be in the first column.</li>
+<li>The column number breaks if someone inserts a column inside the table.</li>
+</ul>
+<p>Two alternatives fix this. <code>XLOOKUP</code>, available in Microsoft 365 and Excel 2021 and later, does the same job with separate ranges, for example <code>=XLOOKUP(E2,A2:A4,C2:C4)</code>. And <code>INDEX</code> with <code>MATCH</code> works in every version.</p>
+  </article>
+  <aside class="cta-box"><h2>Practice it in a real spreadsheet</h2><p>Spreadsheet Academy teaches this in the “Lookups” lesson: 7 short steps in a simulated Excel, with instant feedback.</p>
+<a class="store" href="#" rel="noopener" data-store><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg><span>Get it on the Microsoft Store</span></a></aside>
+  <section class="more"><h2>More guides</h2><ul><li><a href="/blog/excel-if-function/">IF Function in Excel: Simple Examples That Make Sense</a></li><li><a href="/blog/excel-sumif-countif/">SUMIF and COUNTIF in Excel: Add and Count With a Condition</a></li></ul></section>
+</main>
+<footer class="foot"><div class="wrap"><span>&copy; Heren Labs</span><span>Spreadsheet Academy is an independent course and is not affiliated with or endorsed by Microsoft. Excel is a trademark of Microsoft Corporation.</span></div></footer>
+<script src="/assets/store.js"></script>
+</body>
+</html>

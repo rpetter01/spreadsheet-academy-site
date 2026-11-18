@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9YZ1BSCE1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K9YZ1BSCE1');</script>
+<title>IF Function in Excel: Simple Examples That Make Sense · Spreadsheet Academy</title>
+<meta name="description" content="Learn the Excel IF function with simple examples: pass or fail, a bonus calculation and text checks. Includes the common mistakes and how to fix them.">
+<link rel="canonical" href="https://learnexcel.online/blog/excel-if-function/">
+<link rel="alternate" hreflang="en" href="https://learnexcel.online/blog/excel-if-function/">
+<link rel="alternate" hreflang="pt-BR" href="https://learnexcel.online/pt/blog/funcao-se-excel/">
+<link rel="alternate" hreflang="x-default" href="https://learnexcel.online/blog/excel-if-function/">
+<meta property="og:title" content="IF Function in Excel: Simple Examples That Make Sense · Spreadsheet Academy">
+<meta property="og:description" content="Learn the Excel IF function with simple examples: pass or fail, a bonus calculation and text checks. Includes the common mistakes and how to fix them.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://learnexcel.online/blog/excel-if-function/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://learnexcel.online/assets/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f5a3a">
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"IF Function in Excel: Simple Examples That Make Sense","description":"Learn the Excel IF function with simple examples: pass or fail, a bonus calculation and text checks. Includes the common mistakes and how to fix them.","inLanguage":"en","datePublished":"2026-11-18","dateModified":"2026-11-18","mainEntityOfPage":"https://learnexcel.online/blog/excel-if-function/","image":"https://learnexcel.online/assets/poster.jpg","author":{"@type":"Organization","name":"Heren Labs"},"publisher":{"@type":"Organization","name":"Heren Labs","logo":{"@type":"ImageObject","url":"https://learnexcel.online/assets/logo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Spreadsheet Academy","item":"https://learnexcel.online/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://learnexcel.online/blog/"},{"@type":"ListItem","position":3,"name":"IF Function in Excel: Simple Examples That Make Sense","item":"https://learnexcel.online/blog/excel-if-function/"}]}</script>
+</head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="/"><img src="/assets/logo.png" alt="" width="34" height="34"><span>Spreadsheet Academy</span></a>
+  <nav><a href="/blog/">Blog</a><a class="pill" href="/pt/blog/funcao-se-excel/" hreflang="pt-BR" lang="pt-BR" title="Read this guide in Portuguese">Português</a></nav>
+</div></header>
+<main class="wrap art">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a></nav>
+  <article>
+    <h1>IF Function in Excel: Simple Examples That Make Sense</h1>
+    <p class="meta">Published November 18, 2026 · 6 min read</p>
+    <p class="lead">The IF function lets a spreadsheet make a decision for you: if something is true, show one result, and if not, show another. Here is how it works, with examples you can copy.</p>
+<h2>How IF works</h2>
+<p>IF has three parts, separated by commas:</p>
+<pre><code>=IF(test, value_if_true, value_if_false)</code></pre>
+<ul><li><b>test</b> is a question Excel can answer with true or false, such as <code>B2&gt;=60</code>.</li><li><b>value_if_true</b> is what to show when the answer is true.</li><li><b>value_if_false</b> is what to show when it is false.</li></ul>
+<h2>Example 1: pass or fail</h2>
+<p>A teacher wants to mark every score of 60 or more as a pass. The scores are in column B, and the result goes in column C:</p>
+<div class="tw"><table><thead><tr><th></th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>1</td><td>Student</td><td>Score</td><td>Result</td></tr><tr><td>2</td><td>Ana</td><td>45</td><td><b>Fail</b></td></tr><tr><td>3</td><td>Ben</td><td>72</td><td><b>Pass</b></td></tr><tr><td>4</td><td>Cy</td><td>60</td><td><b>Pass</b></td></tr></tbody></table></div>
+<p>In C2 type:</p>
+<pre><code>=IF(B2&gt;=60,"Pass","Fail")</code></pre>
+<p>The test is <code>B2&gt;=60</code>, which reads "B2 is greater than or equal to 60". Ana has 45, so the test is false and Excel shows <b>Fail</b>. Cy has exactly 60, and because of the <code>&gt;=</code> that counts as a pass. Text results go between double quotes.</p>
+<h3>The comparison signs</h3>
+<div class="tw"><table><thead><tr><th>Sign</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td><code>=</code></td><td>equal to</td><td><code>A1="Yes"</code></td></tr><tr><td><code>&lt;&gt;</code></td><td>not equal to</td><td><code>A1&lt;&gt;0</code></td></tr><tr><td><code>&gt;</code></td><td>greater than</td><td><code>A1&gt;100</code></td></tr><tr><td><code>&lt;</code></td><td>less than</td><td><code>A1&lt;100</code></td></tr><tr><td><code>&gt;=</code></td><td>greater than or equal to</td><td><code>A1&gt;=60</code></td></tr><tr><td><code>&lt;=</code></td><td>less than or equal to</td><td><code>A1&lt;=60</code></td></tr></tbody></table></div>
+<h2>Example 2: calculate instead of showing text</h2>
+<p>The results of IF do not have to be words. A company pays a 10% bonus on sales above 10,000, and nothing otherwise. The sales are in column B:</p>
+<pre><code>=IF(B2&gt;10000,B2*0.1,0)</code></pre>
+<p>With a sale of 12,000 the test is true, so Excel calculates 12,000 × 0.1 and shows <b>1,200</b>. With a sale of 8,000 the test is false, so it shows <b>0</b>. Copy the formula down the column and every row gets its own answer.</p>
+<h2>Example 3: compare text</h2>
+<p>To label each invoice as paid or open, based on the word in column C:</p>
+<pre><code>=IF(C2="Yes","Paid","Open")</code></pre>
+<p>Text in a formula always goes between quotes. IF does not care about capital letters, so "yes", "Yes" and "YES" all match.</p>
+<h2>Common mistakes</h2>
+<ul>
+<li><b>Forgetting the quotes around text.</b> <code>=IF(B2&gt;=60,Pass,Fail)</code> shows a <code>#NAME?</code> error, because Excel thinks Pass is a name.</li>
+<li><b>Using &gt; when you mean &gt;=.</b> With <code>B2&gt;60</code>, a score of exactly 60 fails. Check the boundary values.</li>
+<li><b>Leaving out the third part.</b> If the test is false and you gave no value_if_false, Excel shows <code>FALSE</code>.</li>
+<li><b>Commas versus semicolons.</b> In some languages and regional settings, such as Portuguese and Spanish, Excel separates the parts with semicolons and the function has another name: <code>=SE(B2&gt;=60;"Aprovado";"Reprovado")</code>.</li>
+</ul>
+<h2>What to learn next</h2>
+<p>Once IF feels natural, combine several tests with <code>AND</code> and <code>OR</code>, and use <code>IFS</code> or nested IF when there are more than two outcomes.</p>
+  </article>
+  <aside class="cta-box"><h2>Practice it in a real spreadsheet</h2><p>Spreadsheet Academy teaches this in the “Decisions with IF” lesson: 6 short steps in a simulated Excel, with instant feedback.</p>
+<a class="store" href="#" rel="noopener" data-store><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg><span>Get it on the Microsoft Store</span></a></aside>
+  <section class="more"><h2>More guides</h2><ul><li><a href="/blog/excel-vlookup-step-by-step/">VLOOKUP in Excel, Step by Step: Find a Price in a Table</a></li><li><a href="/blog/excel-sumif-countif/">SUMIF and COUNTIF in Excel: Add and Count With a Condition</a></li></ul></section>
+</main>
+<footer class="foot"><div class="wrap"><span>&copy; Heren Labs</span><span>Spreadsheet Academy is an independent course and is not affiliated with or endorsed by Microsoft. Excel is a trademark of Microsoft Corporation.</span></div></footer>
+<script src="/assets/store.js"></script>
+</body>
+</html>
