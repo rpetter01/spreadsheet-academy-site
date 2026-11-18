@@ -24,6 +24,7 @@ td b { color: var(--brand-d); }
 .cta-box { margin: 52px 0 10px; padding: 28px; border-radius: 18px; background: linear-gradient(135deg, #17513a, #0b1f16); color: #fff; }
 .cta-box h2 { margin: 0 0 8px; color: #fff; font-size: 24px; } .cta-box p { color: #cfe7da; margin: 0 0 18px; }
 .store { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--brand-d); font-weight: 800; font-size: 17px; padding: 13px 22px; border-radius: 12px; text-decoration: none; }
+.cta-box .try { margin: 16px 0 0; font-size: 16px; } .cta-box .try a { color: #fff; font-weight: 600; text-underline-offset: 3px; }
 .store svg { width: 20px; height: 20px; } .store:hover { background: var(--soft); }
 .more ul { list-style: none; padding: 0; } .more li { margin: 8px 0; }
 .idx h1 { margin-top: 44px; } .sub { color: var(--ink-2); margin: 0 0 24px; }

@@ -56,6 +56,7 @@ h1 em { font-style: normal; color: var(--accent); }
 footer { max-width: 1560px; width: 100%; margin: 0 auto; font-size: 12.5px; color: #8fc4a8; line-height: 1.5; display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; }
 footer a { color: inherit; }
 @media (max-width: 860px) {
+  .hero { padding-top: 52px; }
   .hero { grid-template-columns: 1fr; }
   .media { order: -1; }
   .brand { margin-bottom: 18px; }
@@ -67,7 +68,7 @@ footer a { color: inherit; }
 </head>
 <body>
 <main class="screen">
-  <div class="lang"><a href="blog/">Blog</a><a href="../" hreflang="en" lang="en" onclick="try{localStorage.setItem('sa-lang','en')}catch(e){}">English</a></div>
+  <div class="lang"><a href="../app/" onclick="try{localStorage.setItem('sa.lang.v1','pt')}catch(e){}">Experimente grátis</a><a href="blog/">Blog</a><a href="../" hreflang="en" lang="en" onclick="try{localStorage.setItem('sa-lang','en')}catch(e){}">English</a></div>
   <section class="hero">
     <div>
       <div class="brand"><img src="../assets/logo.png" alt="" width="48" height="48"><span>Spreadsheet Academy</span></div>
