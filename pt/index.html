@@ -50,6 +50,10 @@ h1 em { font-style: normal; color: var(--accent); }
 .cta { display: inline-flex; align-items: center; gap: 12px; margin-top: clamp(24px, 4vh, 40px); background: #fff; color: var(--brand-d); font-weight: 800; font-size: 19px; padding: 16px 28px; border-radius: 14px; text-decoration: none; box-shadow: 0 10px 30px rgba(0, 0, 0, .3); transition: transform .15s, box-shadow .15s; }
 .cta:hover, .cta:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0, 0, 0, .38); outline: 3px solid var(--accent); outline-offset: 3px; }
 .cta svg { width: 22px; height: 22px; }
+.ctas { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+.cta-try { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.55); box-shadow: none; margin-bottom: 0; }
+.cta-try:hover, .cta-try:focus-visible { background: rgba(255,255,255,.12); box-shadow: none; }
+.ctas .cta + .cta { margin-top: 12px; }
 .sub { margin: 14px 0 0; font-size: 14px; color: #9fd9b9; font-weight: 600; }
 .media { position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 70px rgba(0, 0, 0, .5); aspect-ratio: 16 / 9; background: #0b1f16; border: 1px solid rgba(255, 255, 255, .08); }
 .media video { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -68,17 +72,20 @@ footer a { color: inherit; }
 </head>
 <body>
 <main class="screen">
-  <div class="lang"><a href="../app/" onclick="try{localStorage.setItem('sa.lang.v1','pt')}catch(e){}">Experimente grátis</a><a href="blog/">Blog</a><a href="../" hreflang="en" lang="en" onclick="try{localStorage.setItem('sa-lang','en')}catch(e){}">English</a></div>
+  <div class="lang"><a href="blog/">Blog</a><a href="../" hreflang="en" lang="en" onclick="try{localStorage.setItem('sa-lang','en')}catch(e){}">English</a></div>
   <section class="hero">
     <div>
       <div class="brand"><img src="../assets/logo.png" alt="" width="48" height="48"><span>Spreadsheet Academy</span></div>
       <h1>Aprenda Excel <em>na prática.</em></h1>
       <p class="lead">Um curso prático com as habilidades de Excel que o mercado exige. Pratique fórmulas, dados, gráficos e Tabelas Dinâmicas em uma planilha real, direto no seu PC.</p>
       <ul class="facts"><li>49 aulas práticas</li><li>311 exercícios verificados</li><li>Funciona offline</li></ul>
+      <div class="ctas">
+      <a class="cta cta-try" href="../app/" onclick="try{localStorage.setItem('sa.lang.v1','pt')}catch(e){}">Experimente grátis no navegador</a>
       <a class="cta" id="store" href="#" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
         <span>Disponível na Microsoft Store</span>
       </a>
+      </div>
       <p class="sub" id="sub">Para Windows 10 e 11</p>
     </div>
     <div class="media">
